@@ -1,0 +1,18 @@
+{
+  "name": "tasklist",
+  "version": "1.0.0",
+  "description": "single task manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "nrupali",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
