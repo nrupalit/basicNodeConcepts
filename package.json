@@ -1,0 +1,24 @@
+{
+  "name": "basicNodeConcepts",
+  "version": "1.0.0",
+  "description": "\"# basicNodeConcepts\" \r Basic node concepts with modules.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrupalit/basicNodeConcepts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrupalit/basicNodeConcepts/issues"
+  },
+  "homepage": "https://github.com/nrupalit/basicNodeConcepts#readme"
+}
