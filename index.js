@@ -1,13 +1,11 @@
 const express = require('express');
 const path = require('path');
-const members = require('./Members.js');
+const members = require('./Members');
+const logger = require('./middlewear/logger')
 
 const app = express();
 
-const logger = (req, res, next) => {
-    console.log(`id:${members.id}`);
-    next();
-}
+
 
 //Init Middlewear
 app.use(logger);
