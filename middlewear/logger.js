@@ -1,7 +1,7 @@
 const members = require('../Members');
 
 const logger = (req, res, next) => {
-    console.log(members);
+    // console.log(members);
     next();
 }
 

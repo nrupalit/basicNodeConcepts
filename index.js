@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const members = require('./Members');
 const logger = require('./middlewear/logger')
 
 const app = express();
@@ -8,15 +7,17 @@ const app = express();
 
 
 //Init Middlewear
-app.use(logger);
+// app.use(logger);
 
-//Gets All members
-app.get('/api/members', (req, res) => {
-    res.json(members);
-})
+//Body parser Middlewear
+app.use(express.json());
+app.use(express.urlencoded({ extended : false }));
+
+//Get routes from routes/api/member
+app.use('/api/members', require('./routes/api/member'));
 
 //Set a static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 const PORT = process.env.PORT || 5000;
 
