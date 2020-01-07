@@ -1,10 +1,23 @@
 const express = require('express');
 const path = require('path');
-const logger = require('./middlewear/logger')
+// const logger = require('./middlewear/logger');
+const exphbs = require('express-handlebars');
+const members = require('./Members');
 
 const app = express();
 
+//Init Handlebars
+app.engine('handlebars', exphbs( { defaultLayout: 'main' } ));
+app.set('view engine', 'handlebars');
 
+//Get route
+app.get('/', (req, res) => {
+    res.render('home', {
+        title: 'Memebers APP',
+        members
+
+    });
+});
 
 //Init Middlewear
 // app.use(logger);

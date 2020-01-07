@@ -26,7 +26,8 @@ route.post('/', (req, res) => {
     }
 
     members.push(newMem);
-    res.json(members);
+    // res.json(members);
+    res.redirect('/');
     
 })
 
